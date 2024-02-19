@@ -22,7 +22,7 @@ interface StockDao {
             UPPER(:query) == symbol
         """
     )
-    suspend fun searchCompanyListing(query: Query): List<CompanyListingEntity>
+    suspend fun searchCompanyListing(query: String): List<CompanyListingEntity>
 
 
     @Query("DELETE FROM companylistingentity")
