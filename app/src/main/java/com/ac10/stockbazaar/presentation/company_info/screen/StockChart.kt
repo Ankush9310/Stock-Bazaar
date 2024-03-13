@@ -24,7 +24,7 @@ import kotlin.math.roundToInt
 fun StockChart(
     modifier: Modifier = Modifier,
     info: List<IntraDayInfo> = emptyList(),
-    graphColor: Color = Color.Green,
+    graphColor: Color = Color.Cyan,
 ) {
 
     val spacing = 100f
@@ -85,6 +85,7 @@ fun StockChart(
             for (i in info.indices) {
                 val infos = info[i]
                 val nextInfo = info.getOrNull(i + 1) ?: info.last()
+
                 val leftRatio = (infos.close - lowerValue) / (upperValue - lowerValue)
                 val rightRatio = (nextInfo.close - lowerValue) / (upperValue - lowerValue)
 
