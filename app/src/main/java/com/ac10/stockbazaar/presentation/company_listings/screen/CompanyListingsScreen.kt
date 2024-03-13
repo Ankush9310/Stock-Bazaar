@@ -42,7 +42,7 @@ fun CompanyListingsScreen(
             value = state.searchQuery,
             onValueChange = {
                 viewModel.onEvent(
-                    CompanyListingsEvent.onSearchQueryChange(it)
+                    CompanyListingsEvent.OnSearchQueryChange(it)
                 )
             },
             modifier = Modifier

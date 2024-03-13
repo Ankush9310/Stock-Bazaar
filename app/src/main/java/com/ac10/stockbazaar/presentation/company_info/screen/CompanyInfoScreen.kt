@@ -20,10 +20,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.ac10.stockbazaar.presentation.company_info.viewmodel.CompanyInfoViewModel
+import com.ac10.stockbazaar.presentation.destinations.CompanyInfoScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
 
 @Destination
@@ -123,4 +125,10 @@ fun CompanyInfoScreen(
         }
     }
 
+}
+
+@Preview
+@Composable
+fun CompanyInfoScreenPreview(){
+    CompanyInfoScreen(symbol = "Tesla")
 }

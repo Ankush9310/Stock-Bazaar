@@ -22,9 +22,9 @@ import kotlin.math.roundToInt
 
 @Composable
 fun StockChart(
+    modifier: Modifier = Modifier,
     info: List<IntraDayInfo> = emptyList(),
     graphColor: Color = Color.Green,
-    modifier: Modifier = Modifier,
 ) {
 
     val spacing = 100f
@@ -50,7 +50,9 @@ fun StockChart(
         }
     }
 
-    Canvas(modifier = modifier) {
+    Canvas(
+        modifier = modifier
+    ) {
         val spacePerHour = (size.width - spacing) / info.size
         (0 until info.size - 1 step 2).forEach { i ->
             val infos = info[i]

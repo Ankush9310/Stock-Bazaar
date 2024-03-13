@@ -35,7 +35,7 @@ class CompanyListingsViewModel @Inject constructor(
                 )
             }
 
-            is CompanyListingsEvent.onSearchQueryChange -> {
+            is CompanyListingsEvent.OnSearchQueryChange -> {
                 state = state.copy(
                     searchQuery = event.query
                 )
